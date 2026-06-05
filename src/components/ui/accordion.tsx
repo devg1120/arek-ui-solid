@@ -1,0 +1,54 @@
+import { tv } from "tailwind-variants";
+import { createStyleContext } from "../utils/create-styled-context";
+import { Accordion as A, ark } from "@ark-ui/solid";
+
+const accordionStyles = tv({
+  slots: {
+    root: [],
+    item: ["border-b"],
+    itemTrigger: [
+      "w-full",
+      "flex",
+      "flex-1",
+      "items-center",
+      "justify-between",
+      "py-4",
+      "font-medium",
+      "transition-all",
+      "hover:underline",
+      "_disabled:text-muted-foreground",
+      "_disabled:text-muted-foreground",
+      "_disabled:cursor-not-allowed",
+      "_disabled:hover:no-underline",
+    ],
+    itemIndicator: [
+      "size-4 shrink-0 min-w-min min-h-min transition-transform duration-normal _open:rotate-180",
+    ],
+    itemContent: [
+      "transition-all",
+      "grid",
+      "duration-normal",
+      "ease-default",
+      "grid-rows-[0fr]",
+      "_open:grid-rows-[1fr]",
+    ],
+    itemContentContainer: ["overflow-hidden"],
+  },
+});
+
+const { withContext, withProvider } = createStyleContext(accordionStyles);
+
+const Root = withProvider(A.Root, "root");
+const Item = withContext(A.Item, "item");
+const ItemTrigger = withContext(A.ItemTrigger, "itemTrigger");
+const ItemIndicator = withContext(A.ItemIndicator, "itemIndicator");
+const ItemContent = withContext(A.ItemContent, "itemContent");
+const ItemContentContainer = withContext(ark.div, "itemContentContainer");
+
+export const Accordion = Object.assign(Root, {
+  Item,
+  ItemTrigger,
+  ItemIndicator,
+  ItemContent,
+  ItemContentContainer,
+});
