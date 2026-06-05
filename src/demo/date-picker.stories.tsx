@@ -8,6 +8,8 @@ import { Input } from "../components/ui/input";
 import { Story } from "./storyHelpers";
 import { InputGroup } from "../components/ui/input-group";
 
+import { Center, HStack, VStack } from "../components/ui/stack";
+
 export const BasicDatePicker = () => {
   return (
     <D>
@@ -488,9 +490,11 @@ export const WithInputGroup = (props: {}) => {
 export const DatePickers = () => {
   return (
     <Story title="date pickers" componentFilename="date-picker">
+    <HStack>
       <BasicDatePicker />
       <ParkDatePicker />
       <WithInputGroup />
+    </HStack>
     </Story>
   );
 };

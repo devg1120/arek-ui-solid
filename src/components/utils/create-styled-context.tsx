@@ -66,7 +66,7 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
       const slotStyles = recipe(variantProps);
       const C = Comp as any;
 
-      console.log({ hocProps, compProps });
+      //console.log({ hocProps, compProps });
 
       return (
         <StyleContext.Provider
@@ -106,7 +106,7 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
 
       const C = Comp as any;
 
-      console.log({ classes: ctx.classes });
+      //console.log({ classes: ctx.classes });
 
       const allProps = mergeProps(compProps, {
         class:

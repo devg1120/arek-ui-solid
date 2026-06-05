@@ -242,11 +242,13 @@ export const WithGroupInput = () => {
 export const Selects = () => {
   return (
     <Story title="selects" componentFilename="select">
+    <HStack>
       <SingleSelect />
       <MultipleSelect />
       <DisabledSelect />
       <WithGroupInput />
       <WithError />
+    </HStack>
     </Story>
   );
 };

@@ -1,6 +1,8 @@
 import { Story } from "./storyHelpers";
 import { Checkbox as C } from "../components/ui/checkbox";
 
+import { Center, HStack, VStack } from "../components/ui/stack";
+
 export const Checkbox = () => {
   return (
     <C>
@@ -37,9 +39,11 @@ export const DisabledCheckbox = () => {
 export const Checkboxes = () => {
   return (
     <Story title="checkbox" componentFilename="checkbox">
+    <HStack>
       <Checkbox />
       <IndeterminateCheckbox />
       <DisabledCheckbox />
+    </HStack>
     </Story>
   );
 };

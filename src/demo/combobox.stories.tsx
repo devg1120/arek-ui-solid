@@ -8,6 +8,9 @@ import { cn } from "../components/utils/cn";
 import { Portal } from "solid-js/web";
 import { For } from "solid-js";
 
+import { Center, HStack, VStack } from "../components/ui/stack";
+
+
 const data = [
   { label: "React", value: "react" },
   { label: "Solid", value: "solid" },
@@ -271,12 +274,14 @@ export const WithInputGroup = () => {
 export const Comboboxes = () => {
   return (
     <Story title="comboboxes" componentFilename="combobox">
+    <HStack>
       <SingleCombobox />
       <OpenOnClickCombobox />
       <MultipleCombobox />
       <DisabledCombobox />
       <WithInputGroup />
       <WithError />
+    </HStack>
     </Story>
   );
 };

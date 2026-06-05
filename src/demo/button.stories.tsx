@@ -1,5 +1,7 @@
 import { Loader2, Mail } from "lucide-solid";
 import { Story } from "./storyHelpers";
+import { Center, HStack, VStack } from "../components/ui/stack";
+
 import {
   Button,
   ButtonDestructive,
@@ -9,16 +11,20 @@ import {
   ButtonSecondary,
 } from "../components/ui/button";
 
+  const handleToggle = () => {
+    console.log("Button click!");
+  };
+
 export const Buttons = () => {
   return (
     <Story title="buttons" componentFilename="button">
-      <Button>Primary</Button>
+    <HStack class="gap-4" spacing="gap-4" justify="between" >
+      <Button   onClick={handleToggle} >Primary</Button>
       <ButtonSecondary>Secondary</ButtonSecondary>
       <ButtonGhost>Ghost</ButtonGhost>
       <ButtonDestructive>Destructive</ButtonDestructive>
       <ButtonLink>Link</ButtonLink>
       <ButtonOutline>Outline</ButtonOutline>
-
       <Button>
         <Mail class="mr-2 h-4 w-4" /> Login with Email
       </Button>
@@ -26,6 +32,7 @@ export const Buttons = () => {
         <Loader2 class="mr-2 h-4 w-4 animate-spin" />
         Please wait
       </Button>
+    </HStack>
     </Story>
   );
 };

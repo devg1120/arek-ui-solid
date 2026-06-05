@@ -1,6 +1,7 @@
 import { Mail } from "lucide-solid";
 import { InputGroup } from "../components/ui/input-group";
 import { Story } from "./storyHelpers";
+import { Center, HStack, VStack } from "./components/ui/stack";
 
 export const InputGroups = () => {
   return (

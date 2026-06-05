@@ -49,8 +49,8 @@ export const DemoPage = () => {
   const renderComponents = () => {
     return (
       <VStack
-        spacing={5}
-        class="md:flex-row flex-wrap pb-20 justify-center pt-5 px-5"
+        spacing="gap-4"
+        class="md:flex-row flex-wrap pb-20 justify-start pt-5 px-5"
       >
         <Buttons />
         <Checkboxes />

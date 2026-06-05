@@ -19,9 +19,13 @@ import { IconButton } from "../components/ui/icon-button";
 import { Story } from "./storyHelpers";
 import { For } from "solid-js";
 
+import { Center, HStack, VStack } from "../components/ui/stack";
+
+
 export const IconButtons = () => {
   return (
     <Story title="icon buttons" componentFilename="icon-button">
+    <HStack>
       <For
         each={[
           CoffeeIcon,
@@ -47,6 +51,7 @@ export const IconButtons = () => {
           </IconButton>
         )}
       </For>
+    </HStack>
     </Story>
   );
 };
