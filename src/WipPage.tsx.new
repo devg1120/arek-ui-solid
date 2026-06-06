@@ -22,6 +22,8 @@ export function WipPage() {
 
 
   return (
+  <Center>
     <BasicSplitter/>
+  </Center>
   );
 }

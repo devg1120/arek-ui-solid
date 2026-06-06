@@ -4,6 +4,7 @@ import { Center, HStack, VStack } from "../components/ui/stack";
 
 import {
   Button,
+  ButtonLg,
   ButtonDestructive,
   ButtonGhost,
   ButtonLink,
@@ -20,6 +21,7 @@ export const Buttons = () => {
     <Story title="buttons" componentFilename="button">
     <HStack class="gap-4" spacing="gap-4" justify="between" >
       <Button   onClick={handleToggle} >Primary</Button>
+      <ButtonLg   onClick={handleToggle} >Primary</ButtonLg>
       <ButtonSecondary>Secondary</ButtonSecondary>
       <ButtonGhost>Ghost</ButtonGhost>
       <ButtonDestructive>Destructive</ButtonDestructive>
